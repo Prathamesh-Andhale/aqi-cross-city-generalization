@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY requirements.txt /code/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
-# Create standard non-root user with UID 1000 required by Hugging Face Spaces
+# Create standard non-root user with UID 1000
 RUN useradd -m -u 1000 user
 USER user
 ENV HOME=/home/user \
@@ -25,4 +25,4 @@ COPY --chown=user:user . $HOME/app
 
 EXPOSE 7860
 
-CMD ["gunicorn", "app:app", "--workers", "1", "--threads", "4", "--timeout", "120", "--bind", "0.0.0.0:7860"]
+CMD exec gunicorn app:app --workers 1 --threads 4 --timeout 120 --bind 0.0.0.0:${PORT:-7860}
