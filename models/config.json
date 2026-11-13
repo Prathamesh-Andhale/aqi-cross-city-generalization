@@ -1,0 +1,1 @@
+{"seq_len": 7, "features": ["PM2.5", "PM10", "NO2", "SO2", "CO", "O3", "PM_ratio"], "base_features": ["PM2.5", "PM10", "NO2", "SO2", "CO", "O3"], "n_classes": 6, "train_cities": ["Pune", "Chennai"], "test_city": "Mumbai"}

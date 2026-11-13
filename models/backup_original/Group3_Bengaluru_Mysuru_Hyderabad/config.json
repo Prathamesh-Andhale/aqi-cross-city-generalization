@@ -1,0 +1,1 @@
+{"seq_len": 7, "features": ["PM2.5", "PM10", "NO2", "SO2", "CO", "O3", "PM_ratio", "log_PM25", "log_PM10", "log_NO2", "log_CO"], "base_features": ["PM2.5", "PM10", "NO2", "SO2", "CO", "O3"], "n_classes": 6, "train_cities": ["Bengaluru", "Mysuru"], "test_city": "Hyderabad"}

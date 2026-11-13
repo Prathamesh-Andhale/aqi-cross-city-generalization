@@ -1,0 +1,25 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Python byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Mac filesystem
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor & static analysis
+.vscode/
+.idea/
+.mypy_cache/
+
+# Logs & temp
+*.log
+*.tmp
